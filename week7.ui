@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>705</width>
+    <height>603</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>30</width>
+    <height>20</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: black;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>0</y>
+      <width>351</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="nama_nim">
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>10</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(170, 85, 255);
+background-color: rgb(170, 170, 255);
+border-radius: 15px;
+color: white;
+</string>
+       </property>
+       <property name="text">
+        <string>To-do List  (F1D022043_Faizah)</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>100</y>
+      <width>581</width>
+      <height>441</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QFormLayout" name="formLayout">
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="lineEditTugas">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>35</height>
+          </size>
+         </property>
+         <property name="sizeIncrement">
+          <size>
+           <width>50</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="baseSize">
+          <size>
+           <width>50</width>
+           <height>27</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border-color: rgb(255, 255, 255);
+color: white;
+font-size: 10pt;
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>Masukkan Tugas Anda</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="labelDeadline">
+         <property name="styleSheet">
+          <string notr="true">color: white;
+font-size: 10pt;
+</string>
+         </property>
+         <property name="text">
+          <string>Batas Waktu  : </string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QDateEdit" name="dateEditDeadline">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>35</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:white;
+font-size: 10pt;</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="labelKategori">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+font-size: 10pt;</string>
+         </property>
+         <property name="text">
+          <string>Pilih Kategori : </string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QComboBox" name="comboBoxKategori">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>35</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: white;
+font-size: 10pt;
+border: 1px solid white;
+</string>
+         </property>
+         <property name="currentText">
+          <string>-- Pilih Kategori Tugas mu --</string>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <item>
+          <property name="text">
+           <string>-- Pilih Kategori Tugas mu --</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Pribadi</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Kuliah</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Pekerjaan</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="labelPrioritas">
+         <property name="styleSheet">
+          <string notr="true">color: white;
+font-size : 10pt;</string>
+         </property>
+         <property name="text">
+          <string>Prioritas        :</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QRadioButton" name="radioButtonPenting">
+           <property name="styleSheet">
+            <string notr="true">color: white;
+font-size: 10 pt;
+
+
+</string>
+           </property>
+           <property name="text">
+            <string>Penting</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioButtonSedang">
+           <property name="styleSheet">
+            <string notr="true">color: white;
+font-size: 10 pt;</string>
+           </property>
+           <property name="text">
+            <string>Sedang</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioButtonRendah">
+           <property name="styleSheet">
+            <string notr="true">color: white;
+font-size: 10 pt;</string>
+           </property>
+           <property name="text">
+            <string>Rendah</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="labelTugas">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+font-size: 10pt;
+</string>
+         </property>
+         <property name="text">
+          <string>Nama Tugas  : </string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0" colspan="2">
+        <widget class="QListWidget" name="listWidgetTugas">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QListWidget {
+    color: white;
+background-color: qlineargradient(
+        spread:pad, x1:0, y1:0, x2:1, y2:0,
+        stop:0 rgba(170, 170, 255, 255),
+        stop:1 rgba(255, 255, 255, 255)
+    );
+border: 1px solid rgba(170, 100, 255, 0.6);  
+border-radius: 12px;
+box-shadow: 0 0 10px rgba(170, 100, 255, 0.3); 
+
+}
+
+QListWidget::item {
+    padding: 15px;
+    font-size: 14px;
+}
+</string>
+         </property>
+         <property name="alternatingRowColors">
+          <bool>false</bool>
+         </property>
+         <property name="spacing">
+          <number>3</number>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0" colspan="2">
+        <widget class="QLabel" name="labelDaftarTugas">
+         <property name="styleSheet">
+          <string notr="true">color:white;
+font-size: 10pt;</string>
+         </property>
+         <property name="text">
+          <string>Daftar Tugas</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QPushButton" name="submitButton">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>20</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color:white;
+background-color: rgb(170, 170, 255);
+font-size:10pt;
+font-weight: bold;
+padding: 10px 15px;
+border-radius: 10px;
+</string>
+         </property>
+         <property name="text">
+          <string>Submit</string>
+         </property>
+         <property name="autoRepeat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>705</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuTugas">
+    <property name="title">
+     <string>Tugas</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuBantuan">
+    <property name="title">
+     <string>Bantuan</string>
+    </property>
+   </widget>
+   <addaction name="menuTugas"/>
+   <addaction name="menuBantuan"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
