@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>705</width>
-    <height>603</height>
+    <height>864</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -66,12 +66,24 @@ color: white;
       <x>80</x>
       <y>100</y>
       <width>581</width>
-      <height>441</height>
+      <height>511</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
       <layout class="QFormLayout" name="formLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="labelTugas">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+font-size: 10pt;
+</string>
+         </property>
+         <property name="text">
+          <string>Nama Tugas  : </string>
+         </property>
+        </widget>
+       </item>
        <item row="0" column="1">
         <widget class="QLineEdit" name="lineEditTugas">
          <property name="sizePolicy">
@@ -83,7 +95,7 @@ color: white;
          <property name="minimumSize">
           <size>
            <width>30</width>
-           <height>35</height>
+           <height>30</height>
           </size>
          </property>
          <property name="sizeIncrement">
@@ -102,6 +114,7 @@ color: white;
           <string notr="true">border-color: rgb(255, 255, 255);
 color: white;
 font-size: 10pt;
+max-height: 30px;
 </string>
          </property>
          <property name="text">
@@ -242,19 +255,46 @@ font-size: 10 pt;</string>
          </item>
         </layout>
        </item>
-       <item row="0" column="0">
-        <widget class="QLabel" name="labelTugas">
+       <item row="4" column="0">
+        <widget class="QPushButton" name="submitButton">
+         <property name="minimumSize">
+          <size>
+           <width>30</width>
+           <height>20</height>
+          </size>
+         </property>
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
-font-size: 10pt;
+          <string notr="true">color:white;
+background-color: rgb(0, 170, 0);
+font-size:8pt;
+font-weight: bold;
+padding: 10px 15px;
+border-radius: 10px;
 </string>
          </property>
          <property name="text">
-          <string>Nama Tugas  : </string>
+          <string>Submit</string>
+         </property>
+         <property name="autoRepeat">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
        <item row="6" column="0" colspan="2">
+        <widget class="QLabel" name="labelDaftarTugas">
+         <property name="styleSheet">
+          <string notr="true">color:white;
+font-size: 10pt;</string>
+         </property>
+         <property name="text">
+          <string>Daftar Tugas</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0" colspan="2">
         <widget class="QListWidget" name="listWidgetTugas">
          <property name="font">
           <font>
@@ -289,42 +329,17 @@ QListWidget::item {
          </property>
         </widget>
        </item>
-       <item row="5" column="0" colspan="2">
-        <widget class="QLabel" name="labelDaftarTugas">
+       <item row="8" column="0">
+        <widget class="QPushButton" name="hapusButton">
          <property name="styleSheet">
-          <string notr="true">color:white;
-font-size: 10pt;</string>
+          <string notr="true">color: white;
+background-color: rgb(255, 0, 0);
+border-radius:12px;
+font-size: 8pt;
+padding: 10px 20px;</string>
          </property>
          <property name="text">
-          <string>Daftar Tugas</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="0">
-        <widget class="QPushButton" name="submitButton">
-         <property name="minimumSize">
-          <size>
-           <width>30</width>
-           <height>20</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color:white;
-background-color: rgb(170, 170, 255);
-font-size:10pt;
-font-weight: bold;
-padding: 10px 15px;
-border-radius: 10px;
-</string>
-         </property>
-         <property name="text">
-          <string>Submit</string>
-         </property>
-         <property name="autoRepeat">
-          <bool>true</bool>
+          <string>Hapus</string>
          </property>
         </widget>
        </item>
